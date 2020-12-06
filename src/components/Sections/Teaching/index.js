@@ -32,7 +32,7 @@ export default function Teaching() {
         >
           <p class="text-center">View and Submit Assignments via ReggieNet </p>
 
-          <img class="regginet-logo" src={reggienet} />
+          <img alt="ReggieNet" class="regginet-logo" src={reggienet} />
         </a>
       </div>
       <div className="col-sm-12">

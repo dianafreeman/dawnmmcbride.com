@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
-import ExpandableCard from '../../Card/ExpandableCard';
 
 import Section from '..';
 
@@ -34,7 +32,13 @@ const REFERENCES = {
         <li>
           Coane, J. H., McBride, D. M., &amp; Xu, S. (2020). The feature boost in false memory: The roles of monitoring
           and critical item identifiability. <em>Memory</em>, 28, 481-493.{' '}
-          <a href="https://doi.org/10.1080/09658211.2020.1735445" target="_blank" noopener noreferrer>
+          <a
+            href="https://doi.org/10.1080/09658211.2020.1735445"
+            rel="noopener noreferrer"
+            target="_blank"
+            noopener
+            noreferrer
+          >
             DOI
           </a>
         </li>
@@ -68,7 +72,11 @@ const REFERENCES = {
           {' '}
           McBride, D. M., &amp; Flaherty, M. (in press). Comparing costs in time-based and event-based prospective
           memory. <em>Memory</em>.{' '}
-          <a href="https://doi.org/10.1080/09658211.2020.1798463" target="_blank" noopener noreferrer>
+          <a
+            rel="noopener noreferrer"
+            href="https://doi.org/10.1080/09658211.2020.1798463"
+            target="_blank"
+                    >
             DOI
           </a>
         </li>
