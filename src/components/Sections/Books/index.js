@@ -1,9 +1,7 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import Carousel from 'react-bootstrap/Carousel';
+import Slider from 'react-slick'
+import settings from './sliderSettings'
 import Section from '..'
-import { BookCard } from '../../Card';
 
 import statsManual from '../../../graphics/books/manual-statistical-analysis-in-psychology.jpg'
 import statsBook from '../../../graphics/books/process-statistical-analysis-in-psychology.jpg'
@@ -56,23 +54,41 @@ const BookList = [
     url: 'https://us.sagepub.com/en-us/nam/lab-manual-for-statistical-analysis/book248498',
   },
 ];
+ function BookCard({ imageSrc, title, buttonText = 'Visit Sage Publications', buttonDestination }) {
+   return (
+     <div className="card">
+       <div className="card-img-top" style={{ backgroundImage: `url(${imageSrc})` }} alt={title}></div>
+       <div className="card-body">
+         <p className="card-text">{title}</p>
+         <a
+           href={buttonDestination}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="btn btn-light btn-small book-btn"
+         >
+           <p className="float-left">{buttonText}</p>
+           <span className="float-right">
+             <i className="fas fa-arrow-circle-right ml-2"></i>
+           </span>
+         </a>
+       </div>
+     </div>
+   );
+ }
 export default function Books() {
   return (
     <Section title="Books" id="books" className="bg-primary text-light">
       <div class="col-xs-8 col-md-10 col-lg-11 mx-auto" id="book-slider">
-        <Carousel indicators={false}>
+        <Slider {...settings}>
           {BookList.map((b) => (
-            <Carousel.Item>
-              <BookCard
-                title={b.title}
-                imageSrc={b.image}
-                buttonDestination={b.url}
-              />
-            </Carousel.Item>
+            <BookCard title={b.title} imageSrc={b.image} buttonDestination={b.url} />
           ))}
-        </Carousel>
+        </Slider>
       </div>
       <p class="nav-inst-mobile text-center font-italic muted text-light">Swipe to scroll</p>
     </Section>
   );
 }
+
+
+

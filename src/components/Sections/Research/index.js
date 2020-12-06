@@ -8,8 +8,8 @@ import Section from '..';
 
 const REFERENCES = {
   forgetting: (() => (
-    <>
-      <p className="lead">Selected References</p>
+    <div className="m-1">
+      <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
           McBride, D. M. (2015). Implicit memory. In R. Scott &amp; S. Kosslyn (Eds.),{' '}
@@ -25,11 +25,11 @@ const REFERENCES = {
           task. <em> Journal of Experimental Psychology: General</em>, 126, 371-392.
         </li>
       </ul>
-    </>
+    </div>
   ))(),
   falseMemory: (() => (
-    <>
-      <p className="lead">Selected References</p>
+    <div className="m-1">
+      <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
           Coane, J. H., McBride, D. M., &amp; Xu, S. (2020). The feature boost in false memory: The roles of monitoring
@@ -47,22 +47,22 @@ const REFERENCES = {
           memory task. <em>Experimental Psychology</em>, 54, 62-70.
         </li>
       </ul>
-    </>
+    </div>
   ))(),
   memoryForPictures: (() => (
-    <>
-      <p className="lead">Selected References</p>
+    <div className="m-1">
+      <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
           McBride, D. M., &amp; Dosher, B. A. (2002). A comparison of conscious and automatic memory processes for
           picture and word stimuli: A process dissociation analysis. <em>Consciousness and Cognition.</em> 11, 423-460.
         </li>
       </ul>
-    </>
+    </div>
   ))(),
   prospectiveMemory: (() => (
-    <>
-      <p className="lead">Selected References</p>
+    <div className="m-1">
+      <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
           {' '}
@@ -82,11 +82,11 @@ const REFERENCES = {
           CA: Academic Press/Elsevier.
         </li>
       </ul>
-    </>
+    </div>
   ))(),
   cognitiveTaskChoices: (() => (
-    <>
-      <p className="lead">Selected References</p>
+    <div className="m-3">
+      <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
           Rosenbaum, D.A., Fournier, L.R., Levy-Tzedek, S., McBride, D.M., Rosenthal, R., Sauerberger, K. … Zentall,
@@ -99,7 +99,7 @@ const REFERENCES = {
           <em>Attention Perception &amp; Psychophysics</em>, 81, 1-9
         </li>
       </ul>
-    </>
+    </div>
   ))(),
 };
 
@@ -126,7 +126,7 @@ const ResearchCard = ({ eventKey, title, id = 'cognitiveTaskChoices', body }) =>
     <>
       <div style={styles} id={`${id}-heading`}>
         <Accordion.Toggle variant="link" eventKey={eventKey} style={toggleStyles} as={Button} onClick={() => setOpen(!isOpen)}>
-          <h6 className="mb-0">{title}</h6>
+          <h5 className="mb-0">{title}</h5>
           <span className="js-rotate-if-collapsed" style={{marginTop: 'auto'}}>
             <i className={`indicator fas fa-chevron-${isOpen ? 'down' : 'left'}`}></i>
           </span>

@@ -1,5 +1,6 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import Slider from 'react-slick';
+import settings from './sliderSettings';
 import Section from '..';
 
 import vonderharr from '../../../graphics/photos/vonderharr.jpg';
@@ -62,16 +63,16 @@ export default function MemoryLab() {
         </p>
       </div>
       <div className="col-sm-6">
-        <Carousel indicators={false}>
-          {PhotoSlides.map((p) => (
-            <Carousel.Item>
+        <Slider {...settings}>
+        {PhotoSlides.map((p) => (
+            <div className="col-sm-12">
               <a href={p.image}>
                 <img className="d-block w-100" src={p.image} alt={p.caption} />
               </a>
               <p className="text-center strong">{p.caption}</p>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+            </div>
+        ))}
+        </Slider>
       </div>
     </Section>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
-import headshot from '../../graphics/headshot.jpg'
-import ilstuLogo from '../../graphics/ilstu.png'
-import siteData from '../../siteData.json';
+import headshot from '../../../graphics/headshot.jpg'
+import ilstuLogo from '../../../graphics/ilstu.png'
+import siteData from '../../../siteData.json';
 
 export default function Masthead() {
   return (

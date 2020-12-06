@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: dianafreeman/dawnmmcbride.com
+
+media_folder: "public/uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: 'general'
+        label: 'Site Settings'
+        file: 'src/siteData.json'
+        description: 'Configurable Site Settings'
+        fields:
+          - { label: 'CV Link', name: 'cvFileLink', widget: 'string' }
+          - { label: 'Office Hours Text', name: 'officeHoursText', widget: 'string' }

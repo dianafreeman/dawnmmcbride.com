@@ -4,9 +4,12 @@ import MemoryLab from '../Sections/MemoryLab';
 import Teaching from '../Sections/Teaching';
 import About from '../Sections/About';
 import Research from '../Sections/Research';
-import Masthead from '../Masthead';
+import Masthead from '../Sections/Masthead';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import './App.css';
 
 const Footer = () => (
@@ -26,17 +29,17 @@ function App() {
   return (
     <main id="page-top">
       <Masthead />
+      <hr class="bg-primary-accent" />
       <About />
       <hr class="bg-dark-accent" />
       <Teaching />
       <hr class="bg-primary-accent" />
-
       <Research />
       <hr class="bg-dark-accent" />
-<Books />
+      <Books />
       <hr class="bg-primary-accent" />
-
       <MemoryLab />
+      <hr class="bg-dark-accent" />
       <Footer />
     </main>
   );

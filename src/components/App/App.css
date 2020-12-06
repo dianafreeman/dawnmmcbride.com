@@ -26398,3 +26398,7 @@ font-weight: 600;
   content: '>';
 
 }
+
+#memory-lab .slick-prev::before, #memory-lab .slick-next::before{
+  color: #4e7ba3;
+}
