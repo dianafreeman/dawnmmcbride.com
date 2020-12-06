@@ -12,27 +12,18 @@
   <meta name="og:locale" content="en_us">
 
   <title>Dawn M. McBride, Ph.D</title>
-
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <!-- Font Aweseome-->
   <script src="https://kit.fontawesome.com/0b264d3d21.js"></script>
-
-  <!-- Theme CSS -->
-  <link href="css/main.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-
-  <!-- Slick Carousel -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
   <!-- Animate on Scroll -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-  <!-- Magnific Popup -->
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css' />
-
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+
+  <!-- Netlify Identity -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   </head>
   <body>
@@ -48,5 +39,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
   </body>
 </html>
