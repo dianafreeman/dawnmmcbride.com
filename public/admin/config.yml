@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: dianafreeman/dawnmmcbride.com
+  name: git-gateway
+  # repo: dianafreeman/dawnmmcbride.com
 
 media_folder: "public/uploads"
 
