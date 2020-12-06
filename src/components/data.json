@@ -1,0 +1,67 @@
+{
+  "sections": [
+    {
+      "title": "About",
+      "id": "about",
+      "description": "My research interests are in human memory broadly and forgetting, prospective memory, false memory, and task choices more specifically. My teaching interests/experience includes introductory psychology, research methods and statistics, cognition and learning, and human memory.",
+      "className": "section bg-light-accent"
+    },
+    {
+      "title": "Teaching",
+      "id": "teaching",
+      "description": null,
+      "className": "section bg-light-accent"
+    },
+    {
+      "title": "Research",
+      "id": "research",
+      "description": "How do we decide the order of tasks we need to complete? A recent finding suggests that in some cases, people will complete a task as soon as possible, even if doing so requires extra effort (Rosenbaum et al., 2014). Some of my current work is investigating this effect in cognitive tasks to better understand how we choose when to complete cognitive tasks and whether this choice is based on reducing ones cognitive load.",
+      "className": "section bg-light-accent"
+    },
+    {
+      "title": "Books",
+      "id": "books",
+      "description": null,
+      "className": "section bg-light-accent"
+    }
+  ],
+  "books": [
+    [
+      {
+        "title": "The Process of Research and Statistical Analysis in Psychology",
+        "url": "https://us.sagepub.com/en-us/nam/the-process-of-research-and-statistical-analysis-in-psychology/book262937"
+      },
+
+      {
+        "title": "Lab Manual for Psychological Research and Statistical Analysis",
+        "url": "https://us.sagepub.com/en-us/nam/lab-manual-for-psychological-research-and-statistical-analysis/book267323"
+      },
+
+      {
+        "title": "The Process of Research in Psychology",
+        "url": "https://us.sagepub.com/en-us/nam/the-process-of-research-and-statistical-analysis-in-psychology/book262937"
+      },
+
+      {
+        "title": "Lab Manual for Psychological Research",
+        "url": "https://us.sagepub.com/en-us/nam/lab-manual-for-psychological-research/book258130"
+      },
+
+      {
+        "title": "Cognitive Psychology: Theory, Process, and Methodology",
+        "url": "https://us.sagepub.com/en-us/nam/cognitive-psychology/book253925"
+      },
+
+      {
+        "title": "The Process of Statistical Analysis in Psychology",
+        "url": "https://us.sagepub.com/en-us/nam/the-process-of-statistical-analysis-in-psychology/book248460"
+      },
+
+      {
+        "title": "Lab Manual for Statistical Analysis ",
+        "url": "https://us.sagepub.com/en-us/nam/lab-manual-for-statistical-analysis/book248498"
+      }
+    ]
+  ],
+  "photos": []
+}

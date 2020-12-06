@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*     brand Colors              */
-.carousel.carousel-full-nagivation .left {
+/* .carousel.carousel-full-nagivation .left {
   cursor: url("../../img/arrow-left.png"), url("../../img/arrow-left.cur"), default !important;
-}
-.carousel.carousel-full-nagivation .right {
+} */
+/* .carousel.carousel-full-nagivation .right {
   cursor: url("../../img/arrow-right.png"), url("../../img/arrow-right.cur"), default !important;
-}
+} */
 
 body {
   font-size: 16px;
@@ -4480,7 +4480,7 @@ input[type=button].btn-block {
     width: 100%;
   }
 }
-
+/*
 .accordion > .card {
   overflow: hidden;
 }
@@ -4502,7 +4502,7 @@ input[type=button].btn-block {
 }
 .accordion > .card .card-header {
   margin-bottom: -1px;
-}
+} */
 
 .breadcrumb {
   display: flex;
@@ -9877,12 +9877,12 @@ h3 {
 
  */
 /*     brand Colors              */
-.carousel.carousel-full-nagivation .left {
+/* .carousel.carousel-full-nagivation .left {
   cursor: url("../../img/arrow-left.png"), url("../../img/arrow-left.cur"), default !important;
-}
-.carousel.carousel-full-nagivation .right {
+} */
+/* .carousel.carousel-full-nagivation .right {
   cursor: url("../../img/arrow-right.png"), url("../../img/arrow-right.cur"), default !important;
-}
+} */
 
 .card {
   font-size: 0.875rem;
@@ -24196,9 +24196,9 @@ footer .pull-center {
 .card .card-header .title {
   color: #fff;
 }
-.card .card-header:not([class*=header-]) {
+/* .card .card-header:not([class*=header-]) {
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
+} */
 .card .card-header .nav-tabs {
   padding: 0;
 }
@@ -26005,8 +26005,10 @@ h4,
 
 h5,
 .display-5 {
+  font-weight: 400;
   font-size: 18px;
 }
+
 @media screen and (min-width: 768px) {
   h5,
 .display-5 {
@@ -26178,7 +26180,7 @@ h5,
   width: 100%;
   z-index: 1;
 }
-
+/*
 #research .accordion {
   width: 100%;
 }
@@ -26213,7 +26215,7 @@ h5,
   border-bottom: 3px solid white;
   border-right: 3px solid white;
   border-left: 3px solid white;
-}
+} */
 
 .nav-item .nav-link, .nav-item .responsive-only-label {
   font-size: 18px !important;
