@@ -126,7 +126,7 @@ const ResearchCard = ({ eventKey, title, id = 'cognitiveTaskChoices', body }) =>
     <>
       <div style={styles} id={`${id}-heading`}>
         <Accordion.Toggle variant="link" eventKey={eventKey} style={toggleStyles} as={Button} onClick={() => setOpen(!isOpen)}>
-          <h5 className="display-5 mb-0">{title}</h5>
+          <h6 className="mb-0">{title}</h6>
           <span className="js-rotate-if-collapsed" style={{marginTop: 'auto'}}>
             <i className={`indicator fas fa-chevron-${isOpen ? 'down' : 'left'}`}></i>
           </span>

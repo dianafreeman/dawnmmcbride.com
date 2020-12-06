@@ -26010,12 +26010,7 @@ h5,
   font-size: 18px;
 }
 
-@media screen and (min-width: 768px) {
-  h5,
-.display-5 {
-    font-size: calc(18px + 1vw);
-  }
-}
+
 
 .btn {
   border-radius: 50px;
