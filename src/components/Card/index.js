@@ -30,7 +30,7 @@ export default function Card({ imageSrc, text, buttonText, buttonDestination }) 
 
 export function BookCard({ imageSrc, title, buttonText = 'Visit Sage Publications', buttonDestination }) {
   return (
-    <div className="card">
+    <div className="card col-sm-4 col-md-6 mx-auto">
       <div className="card-img-top" style={{ backgroundImage: `url(${imageSrc})` }} alt={title}></div>
       <div className="card-body">
         <p className="card-text">{title}</p>

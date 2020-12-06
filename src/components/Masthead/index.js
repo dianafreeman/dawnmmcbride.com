@@ -1,6 +1,7 @@
 import React from 'react';
 import headshot from '../../graphics/headshot.jpg'
 import ilstuLogo from '../../graphics/ilstu.png'
+import siteData from '../../siteData.json';
 
 export default function Masthead() {
   return (
@@ -79,7 +80,7 @@ export default function Masthead() {
                 class="btn btn-rounded btn-light btn-light"
                 target="_blank"
                 rel="noopener noreferrer"
-                href="./downloads/Vita_McBride.pdf"
+                href={siteData.cvFileLink}
               >
                 <i class="fas fa-arrow-circle-down fa-lg"></i>
                 <span class="ml-2">Download Vitae</span>

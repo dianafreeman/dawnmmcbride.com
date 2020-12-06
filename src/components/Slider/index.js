@@ -1,46 +1,54 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-const BookSlides = [
-  {
-    image: '',
-    title: '',
-    link: '',
-  },
-];
+import vonderharr from '../../graphics/photos/vonderharr.jpg';
+import hernandez1 from '../../graphics/photos/hernandez1.jpg';
+import devore from '../../graphics/photos/devore.jpg';
+import hernandez2 from '../../graphics/photos/hernandez2.jpg';
+import villarreal from '../../graphics/photos/villarreal.jpg';
+import cam from '../../graphics/photos/cam.jpg';
+
 const PhotoSlides = [
-  {
-    imageSrc: '',
-    title: '',
-    caption: '',
-  },
+
+    {
+      "image": vonderharr,
+      "caption": "Former lab member Rachel Vonderharr presenting at Psychonomics."
+    },
+    {
+      "image": hernandez1,
+      "caption": "Lab member Rosaury Hernandez presenting at the ISU research symposium."
+    },
+
+    {
+      "image": devore,
+      "caption": "Lab member Amanda DeVore presenting at the 2019 Annual Meeting of the Psychonomic Society, Montreal"
+    },
+    {
+      "image": hernandez2,
+      "caption": "Lab member Rosaury Hernandez presenting at the 2019 Annual Meeting of the Psychonomic Society, Montreal"
+    },
+
+    {
+      "image": villarreal,
+      "caption": "Lab member Selena Villarreal presenting at the 2019 Annual Meeting of the Psychonomic Society, Montreal"
+    },
+    {
+      "image": cam,
+      "caption": "Lab member Yonca Cam presenting at the 2019 Annual Meeting of the Psychonomic Society, Montreal"
+    }
+
 ];
 export default function Slider() {
   return (
     <Carousel>
-      <Carousel.Item>
-        <img className="d-block w-100" src="holder.js/800x400?text=First slide&bg=373940" alt="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src="holder.js/800x400?text=Second slide&bg=282c34" alt="Third slide" />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src="holder.js/800x400?text=Third slide&bg=20232a" alt="Third slide" />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
+      {PhotoSlides.map((p) => (
+        <Carousel.Item>
+          <img className="d-block w-100" src={p.image} alt={p.caption} />
+          <Carousel.Caption>
+            <p>{p.caption}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 }

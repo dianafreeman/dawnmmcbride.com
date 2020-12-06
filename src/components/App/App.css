@@ -25961,6 +25961,7 @@ h1,
 }
 @media screen and (min-width: 768px) {
   h1,
+
 .display-1 {
     font-size: calc(36px + 1vw);
   }
@@ -26384,3 +26385,21 @@ footer em {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+#memory-lab .carousel-control-prev-icon::before, #memory-lab .carousel-control-next-icon::before {
+  content: '>';
+ padding: 0.5em;
+background: slategray;
+border-radius: 100%;
+z-index: -1;
+font-weight: 600;
+}
+
+#research .carousel-control-prev-icon::before{
+  content: '<';
+
+}
+#research .carousel-control-next-icon::before{
+  content: '>';
+
+}

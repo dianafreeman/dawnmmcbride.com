@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
-import ExpandableCard from '../Card/ExpandableCard';
+import ExpandableCard from '../../Card/ExpandableCard';
 
-import Section from '.';
+import Section from '..';
 
 const REFERENCES = {
   forgetting: (() => (

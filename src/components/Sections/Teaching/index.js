@@ -1,6 +1,7 @@
 import React from 'react'
 import reggienet from '../../../graphics/reggienet.png';
 import Section from '..'
+import siteData from '../../../siteData.json'
 
 export default function Teaching() {
   return (
@@ -35,7 +36,7 @@ export default function Teaching() {
         </a>
       </div>
       <div className="col-sm-12">
-        <p class="text-center mt-4 pt-4 lead">Office Hours (Fall 2020): By appointment on Zoom</p>
+        <p class="text-center mt-4 pt-4 lead">{siteData.officeHoursText}</p>
       </div>
     </Section>
   );
