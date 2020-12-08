@@ -1,71 +1,70 @@
 import React from 'react';
-import headshot from '../../../graphics/headshot.jpg'
-import ilstuLogo from '../../../graphics/ilstu.png'
+import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
+import headshot from '../../../graphics/headshot.jpg';
+import ilstuLogo from '../../../graphics/ilstu.png';
 import siteData from '../../../siteData.json';
+import { Link } from 'react-scroll';
+/*
 
+<Navbar bg="light" expand="lg">
+  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
+*/
 export default function Masthead() {
+  const linkProps = { spy: true, smooth: true, duration: 1000 };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light-accent fixed-top" id="mainNav">
-        <div className="container-fluid">
-          <a className="navbar-brand js-scroll-trigger" href="#page-top">
-            <div className="box">
-              <img className="logo" alt="Illinois State University Logo" src={ilstuLogo} />
-              <div className="text">
-                <p className="lead">Dawn M. McBride, Ph.D </p>
-                <p className="small">
-                  Department of Psychology
-                  <br />
-                  Illinois State University
-                </p>
-              </div>
+      <Navbar expand="lg" className="bg-light-accent fixed-top">
+        <Link className="navbar-brand" to="page-top" {...linkProps}>
+          <div className="box">
+            <img className="logo" alt="Illinois State University Logo" src={ilstuLogo} />
+            <div className="text">
+              <p className="lead">Dawn M. McBride, Ph.D </p>
+              <p>
+                Department of Psychology
+                <br />
+                Illinois State University
+              </p>
             </div>
-          </a>
+          </div>
+        </Link>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" >
 
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
             <i className="fa fa-bars"></i>
             <span className="responsive-only-label">Menu</span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarResponsive">
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav">
             <ul className="navbar-nav mx-auto">
               <li className="nav-item mx-3">
-                <a className="nav-link js-scroll-trigger" href="#about">
+                <Link className="nav-link" to="about" {...linkProps}>
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link js-scroll-trigger" href="#teaching">
+                <Link className="nav-link" to="teaching" {...linkProps}>
                   Teaching
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link js-scroll-trigger" href="#research">
+                <Link className="nav-link" to="research" {...linkProps}>
                   Research
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link js-scroll-trigger" href="#books">
+                <Link className="nav-link" to="books" {...linkProps}>
                   Books
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-3">
-                <a className="nav-link js-scroll-trigger" href="#memory-lab">
+                <Link className="nav-link" to="memory-lab" {...linkProps}>
                   Memory Lab
-                </a>
+                </Link>
               </li>
             </ul>
-          </div>
-        </div>
-      </nav>
+        </Navbar.Collapse>
+      </Navbar>
 
       <header className="section bg-primary text-white">
         <div className="container-fluid">
@@ -87,7 +86,12 @@ export default function Masthead() {
               </a>
             </div>
             <div className="col-sm-5 text-center">
-              <img src={headshot} alt="Headshot, Dr. Dawn McBride" className="rounded-circle headshot" style={{ width: 'inherit' }} />
+              <img
+                src={headshot}
+                alt="Headshot, Dr. Dawn McBride"
+                className="rounded-circle headshot"
+                style={{ width: 'inherit' }}
+              />
             </div>
           </div>
         </div>

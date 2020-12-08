@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
 
@@ -72,11 +72,7 @@ const REFERENCES = {
           {' '}
           McBride, D. M., &amp; Flaherty, M. (in press). Comparing costs in time-based and event-based prospective
           memory. <em>Memory</em>.{' '}
-          <a
-            rel="noopener noreferrer"
-            href="https://doi.org/10.1080/09658211.2020.1798463"
-            target="_blank"
-                    >
+          <a rel="noopener noreferrer" href="https://doi.org/10.1080/09658211.2020.1798463" target="_blank">
             DOI
           </a>
         </li>
@@ -125,18 +121,25 @@ const toggleStyles = {
   fontSize: ' 24px',
   color: ' #395BAC',
   textAlign: ' left',
-  width: '100%'
+  width: '100%',
 };
 
-const ResearchCard = ({ eventKey, title, id = 'cognitiveTaskChoices', body }) => {
-  const [isOpen, setOpen] = useState()
+const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
   return (
     <>
       <div style={styles} id={`${id}-heading`}>
-        <Accordion.Toggle variant="link" eventKey={eventKey} style={toggleStyles} as={Button} onClick={() => setOpen(!isOpen)}>
-          <h5 className="mb-0">{title}</h5>
-          <span className="js-rotate-if-collapsed" style={{marginTop: 'auto'}}>
-            <i className={`indicator fas fa-chevron-${isOpen ? 'down' : 'left'}`}></i>
+        <Accordion.Toggle
+          variant="link"
+          eventKey={eventKey}
+          style={toggleStyles}
+          as={Button}
+          onClick={() => onToggle(eventKey)}
+        >
+          <p className="mb-0" style={{ fontWeight: 400, fontSize: '24px' }}>
+            {title}
+          </p>
+          <span className="js-rotate-if-collapsed" style={{ marginTop: 'auto' }}>
+            <i className={`indicator fas fa-chevron-${activeKey === eventKey ? 'down' : 'left'}`}></i>
           </span>
         </Accordion.Toggle>
         <Accordion.Collapse eventKey={eventKey}>
@@ -150,12 +153,22 @@ const ResearchCard = ({ eventKey, title, id = 'cognitiveTaskChoices', body }) =>
       </div>
     </>
   );
-}
+};
 export default function Research() {
+  const [activeKey, setActiveKey] = useState('0');
+
+  const onToggle = (keyString) => void setActiveKey(keyString);
+
+  const [accordionItemProps, setAccordionProps] = useState({
+    onToggle,
+  });
+
+
+
   return (
     <Section title="Research" id="research" className="section bg-light-accent">
       <div className="col-sm-12 mx-auto">
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey={activeKey} onSelect={(activeKey) => { setActiveKey(activeKey) }}>
           <ResearchCard
             title="Cognitive Task Choices"
             body={`How do we decide the order of tasks we need to complete? A recent finding suggests that in some cases,
@@ -165,30 +178,40 @@ export default function Research() {
                   ones cognitive load.`}
             id="cognitiveTaskChoices"
             eventKey="0"
+            activeKey={activeKey}
+            {...accordionItemProps}
           ></ResearchCard>
           <ResearchCard
             title="Prospective Memory"
             body={` Prospective memory (PM) is used when we try to remember to perform a task at a particular time or after a specific event. For example, we use prospective memory when we remember to take medication each night before we go to bed. When we walk into the kitchen to pour ourselves a drink and forget why we went to the kitchen because we remembered three other things we needed to do on the way, our prospective memory has failed us.​​ `}
             id="prospectiveMemory"
             eventKey="1"
+            activeKey={activeKey}
+            {...accordionItemProps}
           ></ResearchCard>
           <ResearchCard
             title="Memory for Pictures"
             body={` My dissertation project tested current theories of the picture superiority effect (better memory for pictures than words). A popular theory is dual coding (Paivio, 1991), which states that pictures are better remembered because they are encoded with two specific codes (pictorial and verbal) while words elicit just a single code (verbal). The extra code associated with pictures give them an advantage during retrieval.​ `}
             id="memoryForPictures"
-            eventKey="3"
+            eventKey="2"
+            activeKey={activeKey}
+            {...accordionItemProps}
           ></ResearchCard>
           <ResearchCard
             title="False Memory"
             body={`In 1995, Roediger and McDermott revived the Deese (1959) paradigm for creating false memories in a laboratory experiment. Using this procedure, Roediger and McDermott showed that subjects will falsely recall and recognize items from a studied word list that were not shown. The false items were induced by lists of words that are strongly associated to the critical item (e.g., falsely recall “sleep” is given “dream”, “bed”, “rest”, “awake”, etc). Subjects will even report an experience of recalling the context with which the critical item appeared (Payne, Ellie, & Blackwell, 1996).​ `}
             id="falseMemory"
-            eventKey="2"
+            eventKey="3"
+            activeKey={activeKey}
+            {...accordionItemProps}
           ></ResearchCard>
           <ResearchCard
             title="Implicit Memory and Forgetting"
             body={`My research on implicit and explicit memory (also automatic and conscious memory) has focused on what the differences really are. One popular view of the implicit/explicit distinction is that of separable memory systems for the two forms of memory. Several authors (e.g., Dosher & Rosedale, 1991; Nadel, 1994; Schacter & Tulving, 1994) have cited forgetting differences as an important criterion for distinguishing memory systems. Along these lines, claims of differing forgetting rates have been made for implicit and explicit tasks. ​ `}
             id="forgetting"
             eventKey="4"
+            activeKey={activeKey}
+            {...accordionItemProps}
           ></ResearchCard>
         </Accordion>
       </div>
