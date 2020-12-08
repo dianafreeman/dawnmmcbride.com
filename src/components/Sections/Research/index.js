@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Accordion from 'react-bootstrap/Accordion';
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Accordion from "react-bootstrap/Accordion";
 
-import Section from '..';
+import Section from "..";
 
 const REFERENCES = {
   forgetting: (() => (
@@ -10,17 +10,23 @@ const REFERENCES = {
       <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
-          McBride, D. M. (2015). Implicit memory. In R. Scott &amp; S. Kosslyn (Eds.),{' '}
-          <em>Emerging Trends in the Social and Behavioral Sciences</em>. New Jersey: Wiley &amp; Sons.
+          McBride, D. M. (2015). Implicit memory. In R. Scott &amp; S. Kosslyn
+          (Eds.), <em>Emerging Trends in the Social and Behavioral Sciences</em>
+          . New Jersey: Wiley &amp; Sons.
         </li>
         <li>
-          McBride, D. M., &amp; Dosher, B. A. (1999). Forgetting rates are similar in conscious and automatic memory: A
-          process dissociation study. <em>Journal of Experimental Psychology: Learning, Memory, and Cognition,</em> 25,
-          583-607.
+          McBride, D. M., &amp; Dosher, B. A. (1999). Forgetting rates are
+          similar in conscious and automatic memory: A process dissociation
+          study.{" "}
+          <em>
+            Journal of Experimental Psychology: Learning, Memory, and Cognition,
+          </em>{" "}
+          25, 583-607.
         </li>
         <li>
-          McBride, D. M., &amp; Dosher, B. A. (1997). A comparison of forgetting in an implicit and explicit memory
-          task. <em> Journal of Experimental Psychology: General</em>, 126, 371-392.
+          McBride, D. M., &amp; Dosher, B. A. (1997). A comparison of forgetting
+          in an implicit and explicit memory task.{" "}
+          <em> Journal of Experimental Psychology: General</em>, 126, 371-392.
         </li>
       </ul>
     </div>
@@ -30,8 +36,9 @@ const REFERENCES = {
       <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
-          Coane, J. H., McBride, D. M., &amp; Xu, S. (2020). The feature boost in false memory: The roles of monitoring
-          and critical item identifiability. <em>Memory</em>, 28, 481-493.{' '}
+          Coane, J. H., McBride, D. M., &amp; Xu, S. (2020). The feature boost
+          in false memory: The roles of monitoring and critical item
+          identifiability. <em>Memory</em>, 28, 481-493.{" "}
           <a
             href="https://doi.org/10.1080/09658211.2020.1735445"
             rel="noopener noreferrer"
@@ -43,12 +50,14 @@ const REFERENCES = {
           </a>
         </li>
         <li>
-          McBride, D. M., Coane, J. H., Xu, S., Feng, Y., &amp; Yu, Z. (2019). Short-term false memories vary as a
-          function of list type. <em>Quarterly Journal of Experimental Psychology</em>, 72, 2726-2741.
+          McBride, D. M., Coane, J. H., Xu, S., Feng, Y., &amp; Yu, Z. (2019).
+          Short-term false memories vary as a function of list type.{" "}
+          <em>Quarterly Journal of Experimental Psychology</em>, 72, 2726-2741.
         </li>
         <li>
-          Coane, J. H, McBride, D. M., Raulerson, B. A. III, &amp; Jordan, J. S. (2007). False memory in a short-term
-          memory task. <em>Experimental Psychology</em>, 54, 62-70.
+          Coane, J. H, McBride, D. M., Raulerson, B. A. III, &amp; Jordan, J. S.
+          (2007). False memory in a short-term memory task.{" "}
+          <em>Experimental Psychology</em>, 54, 62-70.
         </li>
       </ul>
     </div>
@@ -58,8 +67,10 @@ const REFERENCES = {
       <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
-          McBride, D. M., &amp; Dosher, B. A. (2002). A comparison of conscious and automatic memory processes for
-          picture and word stimuli: A process dissociation analysis. <em>Consciousness and Cognition.</em> 11, 423-460.
+          McBride, D. M., &amp; Dosher, B. A. (2002). A comparison of conscious
+          and automatic memory processes for picture and word stimuli: A process
+          dissociation analysis. <em>Consciousness and Cognition.</em> 11,
+          423-460.
         </li>
       </ul>
     </div>
@@ -69,21 +80,27 @@ const REFERENCES = {
       <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
-          {' '}
-          McBride, D. M., &amp; Flaherty, M. (in press). Comparing costs in time-based and event-based prospective
-          memory. <em>Memory</em>.{' '}
-          <a rel="noopener noreferrer" href="https://doi.org/10.1080/09658211.2020.1798463" target="_blank">
+          {" "}
+          McBride, D. M., &amp; Flaherty, M. (in press). Comparing costs in
+          time-based and event-based prospective memory. <em>Memory</em>.{" "}
+          <a
+            rel="noopener noreferrer"
+            href="https://doi.org/10.1080/09658211.2020.1798463"
+            target="_blank"
+          >
             DOI
           </a>
         </li>
         <li>
-          Conte, A. M., &amp; McBride, D. M. (2018). Comparing time-based and event-based prospective memory over short
-          delays. <em>Memory</em>, 26, 936-945.
+          Conte, A. M., &amp; McBride, D. M. (2018). Comparing time-based and
+          event-based prospective memory over short delays. <em>Memory</em>, 26,
+          936-945.
         </li>
         <li>
-          McBride, D. M., &amp; Workman, R. A. (2017). Is prospective memory unique? A comparison of prospective and
-          retrospective memory. In B. Ross (Ed.), <em>Psychology of Learning and Motivation</em>, vol. 67. San Diego,
-          CA: Academic Press/Elsevier.
+          McBride, D. M., &amp; Workman, R. A. (2017). Is prospective memory
+          unique? A comparison of prospective and retrospective memory. In B.
+          Ross (Ed.), <em>Psychology of Learning and Motivation</em>, vol. 67.
+          San Diego, CA: Academic Press/Elsevier.
         </li>
       </ul>
     </div>
@@ -93,13 +110,15 @@ const REFERENCES = {
       <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
-          Rosenbaum, D.A., Fournier, L.R., Levy-Tzedek, S., McBride, D.M., Rosenthal, R., Sauerberger, K. … Zentall,
-          T.R. (2019). Sooner rather than later: Pre-crastination rather than procrastination.
+          Rosenbaum, D.A., Fournier, L.R., Levy-Tzedek, S., McBride, D.M.,
+          Rosenthal, R., Sauerberger, K. … Zentall, T.R. (2019). Sooner rather
+          than later: Pre-crastination rather than procrastination.
           <em> Current Directions in Psychological Science </em>, 28, 229-233.
         </li>
         <li>
-          VonderHaar, R. L., McBride, D. M., &amp; Rosenbaum, D. A. (2019). Task order choices in cognitive and
-          perceptual-motor tasks: The cognitive-load-reduction (CLEAR) hypothesis.{' '}
+          VonderHaar, R. L., McBride, D. M., &amp; Rosenbaum, D. A. (2019). Task
+          order choices in cognitive and perceptual-motor tasks: The
+          cognitive-load-reduction (CLEAR) hypothesis.{" "}
           <em>Attention Perception &amp; Psychophysics</em>, 81, 1-9
         </li>
       </ul>
@@ -108,20 +127,20 @@ const REFERENCES = {
 };
 
 const styles = {
-  background: 'white',
-  borderRadius: ' 25px',
-  borderBottom: ' 3px solid white',
-  borderRight: ' 3px solid white',
-  borderLeft: ' 3px solid white',
+  background: "white",
+  borderRadius: " 25px",
+  borderBottom: " 3px solid white",
+  borderRight: " 3px solid white",
+  borderLeft: " 3px solid white",
 };
 
 const toggleStyles = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  fontSize: ' 24px',
-  color: ' #395BAC',
-  textAlign: ' left',
-  width: '100%',
+  display: "flex",
+  justifyContent: "space-between",
+  fontSize: " 24px",
+  color: " #395BAC",
+  textAlign: " left",
+  width: "100%",
 };
 
 const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
@@ -135,16 +154,26 @@ const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
           as={Button}
           onClick={() => onToggle(eventKey)}
         >
-          <p className="mb-0" style={{ fontWeight: 400, fontSize: '24px' }}>
+          <p className="mb-0" style={{ fontWeight: 400, fontSize: "24px" }}>
             {title}
           </p>
-          <span className="js-rotate-if-collapsed" style={{ marginTop: 'auto' }}>
-            <i className={`indicator fas fa-chevron-${activeKey === eventKey ? 'down' : 'left'}`}></i>
+          <span
+            className="js-rotate-if-collapsed"
+            style={{ marginTop: "auto" }}
+          >
+            <i
+              className={`indicator fas fa-chevron-${
+                activeKey === eventKey ? "down" : "left"
+              }`}
+            ></i>
           </span>
         </Accordion.Toggle>
         <Accordion.Collapse eventKey={eventKey}>
           <div>
-            <div className="card-body" style={{ backgroundColor: 'whitesmoke' }}>
+            <div
+              className="card-body"
+              style={{ backgroundColor: "whitesmoke" }}
+            >
               {body}
             </div>
             {REFERENCES[id]}
@@ -155,20 +184,23 @@ const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
   );
 };
 export default function Research() {
-  const [activeKey, setActiveKey] = useState('0');
+  const [activeKey, setActiveKey] = useState("0");
 
   const onToggle = (keyString) => void setActiveKey(keyString);
 
-  const [accordionItemProps, setAccordionProps] = useState({
+  const accordionItemProps = {
     onToggle,
-  });
-
-
+  };
 
   return (
     <Section title="Research" id="research" className="section bg-light-accent">
       <div className="col-sm-12 mx-auto">
-        <Accordion defaultActiveKey={activeKey} onSelect={(activeKey) => { setActiveKey(activeKey) }}>
+        <Accordion
+          defaultActiveKey={activeKey}
+          onSelect={(activeKey) => {
+            setActiveKey(activeKey);
+          }}
+        >
           <ResearchCard
             title="Cognitive Task Choices"
             body={`How do we decide the order of tasks we need to complete? A recent finding suggests that in some cases,

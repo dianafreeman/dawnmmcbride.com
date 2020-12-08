@@ -1,6 +1,11 @@
-import React from 'react';
+import React from "react";
 
-export default function Section({ title = 'About', description, children, ...rest }) {
+export default function Section({
+  title = "About",
+  description,
+  children,
+  ...rest
+}) {
   return (
     <section {...rest}>
       <div className="container">

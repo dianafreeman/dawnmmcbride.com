@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function GallerySlider() {
   return (
@@ -8,7 +8,10 @@ export default function GallerySlider() {
         style="background-image: url('./graphics/photos/vonderharr.jpg')"
         title="Former lab member Rachel Vonderharr presenting at Psychonomics."
       >
-        <img style="visibility: hidden" src="./graphics/photos/vonderharr.jpg" />
+        <img
+          style="visibility: hidden"
+          src="./graphics/photos/vonderharr.jpg"
+        />
       </a>
       <a
         href="./graphics/photos/hernandez.jpg"

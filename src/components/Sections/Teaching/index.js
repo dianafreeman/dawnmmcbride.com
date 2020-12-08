@@ -1,11 +1,15 @@
-import React from 'react'
-import reggienet from '../../../graphics/reggienet.png';
-import Section from '..'
-import siteData from '../../../siteData.json'
+import React from "react";
+import reggienet from "../../../graphics/reggienet.png";
+import Section from "..";
+import siteData from "../../../siteData.json";
 
 export default function Teaching() {
   return (
-    <Section title="Teaching" id="teaching" className="section bg-primary text-light">
+    <Section
+      title="Teaching"
+      id="teaching"
+      className="section bg-primary text-light"
+    >
       <div class="col-md-6 mx-auto">
         <p class="lead">
           <strong>Fall 2020</strong>
