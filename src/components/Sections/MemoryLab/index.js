@@ -47,14 +47,14 @@ export default function MemoryLab() {
   return (
     <Section title="Human Memory Lab" id="memory-lab">
       <div className="col-sm-6">
-        <p class="lead">
+        <p className="lead">
           In the Human Memory Lab, we examine the processes involved in
           different types of memory, including: prospective memory, false
           memory, implicit memory, and forgetting. Students working in the lab
           have the opportunity to develop experimental research skills,
           presentation skills, and leadership skills. For more information about
           the opportunities in my lab,{" "}
-          <a class="text-secondary" href="mailto:dmmcbri@ilstu.edu">
+          <a className="text-secondary" href="mailto:dmmcbri@ilstu.edu">
             contact me
           </a>{" "}
           or
@@ -62,7 +62,7 @@ export default function MemoryLab() {
             href="https://psychology.illinoisstate.edu/research/researchApprent/"
             target="_blank"
             rel="noreferrer noopener"
-            class="text-secondary pb-6"
+            className="text-secondary pb-6"
           >
             visit the ISU Undergraduate Research Opportunities{" "}
           </a>{" "}

@@ -13,14 +13,14 @@ import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
 
 const Footer = () => (
-  <footer class="bg-dark container-fluid">
-    <div class="col-sm-12">
-      <div class="col-sm-10 mx-auto">
-        <p class="text-center text-white">
-          <em class="muted"> All Rights Reserved </em>
+  <footer className="bg-dark container-fluid">
+    <div className="col-sm-12">
+      <div className="col-sm-10 mx-auto">
+        <p className="text-center text-white">
+          <em className="muted"> All Rights Reserved </em>
           &copy; 2019 | Dawn M. McBride, Ph.D
         </p>
-        <p class="text-center text-white">
+        <p className="text-center text-white">
           Campus Box 4620, Normal, IL 61790-4620
         </p>
       </div>
@@ -31,17 +31,17 @@ function App() {
   return (
     <main id="page-top">
       <Masthead />
-      <hr class="bg-primary-accent" />
+      <hr className="bg-primary-accent" />
       <About />
-      <hr class="bg-dark-accent" />
+      <hr className="bg-dark-accent" />
       <Teaching />
-      <hr class="bg-primary-accent" />
+      <hr className="bg-primary-accent" />
       <Research />
-      <hr class="bg-dark-accent" />
+      <hr className="bg-dark-accent" />
       <Books />
-      <hr class="bg-primary-accent" />
+      <hr className="bg-primary-accent" />
       <MemoryLab />
-      <hr class="bg-dark-accent" />
+      <hr className="bg-dark-accent" />
       <Footer />
     </main>
   );

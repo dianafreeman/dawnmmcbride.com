@@ -2,7 +2,7 @@ import React from "react";
 
 export default function GallerySlider() {
   return (
-    <div id="gallery-slider" class="photo-gallery">
+    <div id="gallery-slider" className="photo-gallery">
       <a
         href="./graphics/photos/vonderharr.jpg"
         style="background-image: url('./graphics/photos/vonderharr.jpg')"

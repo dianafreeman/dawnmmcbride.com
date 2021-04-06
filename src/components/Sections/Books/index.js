@@ -93,10 +93,11 @@ function BookCard({
 export default function Books() {
   return (
     <Section title="Books" id="books" className="bg-primary text-light">
-      <div class="col-xs-8 col-md-10 col-lg-11 mx-auto" id="book-slider">
+      <div className="col-xs-8 col-md-10 col-lg-11 mx-auto" id="book-slider">
         <Slider {...settings}>
-          {BookList.map((b) => (
+          {BookList.map((b, idx) => (
             <BookCard
+              key={`book-${idx}`}
               title={b.title}
               imageSrc={b.image}
               buttonDestination={b.url}
@@ -104,7 +105,7 @@ export default function Books() {
           ))}
         </Slider>
       </div>
-      <p class="nav-inst-mobile text-center font-italic muted text-light">
+      <p className="nav-inst-mobile text-center font-italic muted text-light">
         Swipe to scroll
       </p>
     </Section>

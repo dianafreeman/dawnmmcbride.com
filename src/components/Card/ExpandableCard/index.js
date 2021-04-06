@@ -16,20 +16,20 @@ export default function ExpandableCard({
 }) {
   return (
     <div style={styles}>
-      <div class="card-header" id={`${toggleSlug}-heading`}>
-        <h5 class="display-5 mb-0">{title}</h5>
-        <span class="ind-container js-rotate-if-collapsed">
-          <i class="indicator fas fa-chevron-left"></i>
+      <div className="card-header" id={`${toggleSlug}-heading`}>
+        <h5 className="display-5 mb-0">{title}</h5>
+        <span className="ind-container js-rotate-if-collapsed">
+          <i className="indicator fas fa-chevron-left"></i>
         </span>
       </div>
       <div
         id={toggleSlug}
-        class=""
+        className=""
         aria-labelledby={`${toggleSlug}-heading`}
         data-parent="#accordion"
       >
-        <div class="card-body">{body}</div>
-        <div class="card-footer">{children}</div>
+        <div className="card-body">{body}</div>
+        <div className="card-footer">{children}</div>
       </div>
     </div>
   );

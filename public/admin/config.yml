@@ -18,3 +18,16 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: 'CV Link', name: 'cvFileLink', widget: 'string' }
           - { label: 'Office Hours Text', name: 'officeHoursText', widget: 'string' }
+
+  - name: 'courses'
+    label: 'Courses'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: true
+    files:
+      - name: 'courses'
+        label: 'Active Courses'
+        file: 'src/content/courses.md'
+        description: 'Courses List'
+        fields:
+          - { label: 'Courses List', name: 'coursesList', widget: 'markdown' }

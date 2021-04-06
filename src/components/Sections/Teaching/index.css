@@ -1,0 +1,9 @@
+.lead h1, .lead h2, .lead h3,.lead h4,.lead h5,.lead h6{
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+}
+.lead p{
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
