@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  repo: dianafreeman/dawnmmcbride.com
+
+media_folder: "public/uploads"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: 'general'
+        label: 'Contact information'
+        file: 'src/contactInfo.json'
+        description: 'Contact Info'
+        fields:
+          - { label: 'CV Link', name: 'cvLink', widget: 'string' }
+          - { label: 'Office Hours Text', name: 'officeHours', widget: 'string' }
+          - { label: 'Address', name: 'address', widget: 'string' }
+
+  - name: 'courses'
+    label: 'Courses'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: true
+    files:
+      - name: 'courses'
+        label: 'Active Courses'
+        file: 'src/content/courses.md'
+        description: 'Courses List'
+        fields:
+          - { label: 'Body', name: 'body', widget: 'markdown' }

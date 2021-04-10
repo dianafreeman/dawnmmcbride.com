@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Accordion from "react-bootstrap/Accordion";
+import React, { useState } from "react"
+import Button from "react-bootstrap/Button"
+import Accordion from "react-bootstrap/Accordion"
 
-import Section from "..";
+import Section from ".."
 
 const REFERENCES = {
   forgetting: (() => (
@@ -17,15 +17,15 @@ const REFERENCES = {
         <li>
           McBride, D. M., &amp; Dosher, B. A. (1999). Forgetting rates are
           similar in conscious and automatic memory: A process dissociation
-          study.{" "}
+          study.
           <em>
             Journal of Experimental Psychology: Learning, Memory, and Cognition,
-          </em>{" "}
+          </em>
           25, 583-607.
         </li>
         <li>
           McBride, D. M., &amp; Dosher, B. A. (1997). A comparison of forgetting
-          in an implicit and explicit memory task.{" "}
+          in an implicit and explicit memory task.
           <em> Journal of Experimental Psychology: General</em>, 126, 371-392.
         </li>
       </ul>
@@ -38,25 +38,23 @@ const REFERENCES = {
         <li>
           Coane, J. H., McBride, D. M., &amp; Xu, S. (2020). The feature boost
           in false memory: The roles of monitoring and critical item
-          identifiability. <em>Memory</em>, 28, 481-493.{" "}
+          identifiability. <em>Memory</em>, 28, 481-493.
           <a
             href="https://doi.org/10.1080/09658211.2020.1735445"
             rel="noopener noreferrer"
             target="_blank"
-            noopener
-            noreferrer
           >
             DOI
           </a>
         </li>
         <li>
           McBride, D. M., Coane, J. H., Xu, S., Feng, Y., &amp; Yu, Z. (2019).
-          Short-term false memories vary as a function of list type.{" "}
+          Short-term false memories vary as a function of list type.
           <em>Quarterly Journal of Experimental Psychology</em>, 72, 2726-2741.
         </li>
         <li>
           Coane, J. H, McBride, D. M., Raulerson, B. A. III, &amp; Jordan, J. S.
-          (2007). False memory in a short-term memory task.{" "}
+          (2007). False memory in a short-term memory task.
           <em>Experimental Psychology</em>, 54, 62-70.
         </li>
       </ul>
@@ -80,9 +78,8 @@ const REFERENCES = {
       <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
-          {" "}
           McBride, D. M., &amp; Flaherty, M. (in press). Comparing costs in
-          time-based and event-based prospective memory. <em>Memory</em>.{" "}
+          time-based and event-based prospective memory. <em>Memory</em>.
           <a
             rel="noopener noreferrer"
             href="https://doi.org/10.1080/09658211.2020.1798463"
@@ -118,13 +115,13 @@ const REFERENCES = {
         <li>
           VonderHaar, R. L., McBride, D. M., &amp; Rosenbaum, D. A. (2019). Task
           order choices in cognitive and perceptual-motor tasks: The
-          cognitive-load-reduction (CLEAR) hypothesis.{" "}
+          cognitive-load-reduction (CLEAR) hypothesis.
           <em>Attention Perception &amp; Psychophysics</em>, 81, 1-9
         </li>
       </ul>
     </div>
   ))(),
-};
+}
 
 const styles = {
   background: "white",
@@ -132,7 +129,7 @@ const styles = {
   borderBottom: " 3px solid white",
   borderRight: " 3px solid white",
   borderLeft: " 3px solid white",
-};
+}
 
 const toggleStyles = {
   display: "flex",
@@ -141,7 +138,7 @@ const toggleStyles = {
   color: " #395BAC",
   textAlign: " left",
   width: "100%",
-};
+}
 
 const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
   return (
@@ -181,24 +178,24 @@ const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
         </Accordion.Collapse>
       </div>
     </>
-  );
-};
+  )
+}
 export default function Research() {
-  const [activeKey, setActiveKey] = useState("0");
+  const [activeKey, setActiveKey] = useState("0")
 
-  const onToggle = (keyString) => void setActiveKey(keyString);
+  const onToggle = keyString => void setActiveKey(keyString)
 
   const accordionItemProps = {
     onToggle,
-  };
+  }
 
   return (
     <Section title="Research" id="research" className="section bg-light-accent">
       <div className="col-sm-12 mx-auto">
         <Accordion
           defaultActiveKey={activeKey}
-          onSelect={(activeKey) => {
-            setActiveKey(activeKey);
+          onSelect={activeKey => {
+            setActiveKey(activeKey)
           }}
         >
           <ResearchCard
@@ -248,5 +245,5 @@ export default function Research() {
         </Accordion>
       </div>
     </Section>
-  );
+  )
 }

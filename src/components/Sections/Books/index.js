@@ -1,15 +1,15 @@
-import React from "react";
-import Slider from "react-slick";
-import settings from "./sliderSettings";
-import Section from "..";
+import React from "react"
+import Slider from "react-slick"
+import settings from "./sliderSettings"
+import Section from ".."
 
-import statsManual from "../../../graphics/books/manual-statistical-analysis-in-psychology.jpg";
-import statsBook from "../../../graphics/books/process-statistical-analysis-in-psychology.jpg";
-import cognitiveBook from "../../../graphics/books/cognitive-psychology.jpg";
-import resarchAndStatsBook from "../../../graphics/books/process-research-and-statistical-analysis-in-psychology.jpg";
-import researchAndStatsManual from "../../../graphics/books/manual-psychological-research-and-statistical-analysis.jpg";
-import researchBook from "../../../graphics/books/process-of-research-in-psychology.jpg";
-import researchManual from "../../../graphics/books/manual-psychological-research.jpg";
+import statsManual from "../../../images/books/manual-statistical-analysis-in-psychology.jpg"
+import statsBook from "../../../images/books/process-statistical-analysis-in-psychology.jpg"
+import cognitiveBook from "../../../images/books/cognitive-psychology.jpg"
+import resarchAndStatsBook from "../../../images/books/process-research-and-statistical-analysis-in-psychology.jpg"
+import researchAndStatsManual from "../../../images/books/manual-psychological-research-and-statistical-analysis.jpg"
+import researchBook from "../../../images/books/process-of-research-in-psychology.jpg"
+import researchManual from "../../../images/books/manual-psychological-research.jpg"
 
 const BookList = [
   {
@@ -59,7 +59,7 @@ const BookList = [
     url:
       "https://us.sagepub.com/en-us/nam/lab-manual-for-statistical-analysis/book248498",
   },
-];
+]
 function BookCard({
   imageSrc,
   title,
@@ -67,7 +67,7 @@ function BookCard({
   buttonDestination,
 }) {
   return (
-    <div className="card">
+    <div className="card mx-2">
       <div
         className="card-img-top"
         style={{ backgroundImage: `url(${imageSrc})` }}
@@ -88,15 +88,16 @@ function BookCard({
         </a>
       </div>
     </div>
-  );
+  )
 }
 export default function Books() {
   return (
     <Section title="Books" id="books" className="bg-primary text-light">
-      <div class="col-xs-8 col-md-10 col-lg-11 mx-auto" id="book-slider">
+      <div className="col-xs-8 col-md-10 col-lg-11 mx-auto" id="book-slider">
         <Slider {...settings}>
-          {BookList.map((b) => (
+          {BookList.map((b, idx) => (
             <BookCard
+              key={`book-${idx}`}
               title={b.title}
               imageSrc={b.image}
               buttonDestination={b.url}
@@ -104,9 +105,9 @@ export default function Books() {
           ))}
         </Slider>
       </div>
-      <p class="nav-inst-mobile text-center font-italic muted text-light">
+      <p className="nav-inst-mobile text-center font-italic muted text-light">
         Swipe to scroll
       </p>
     </Section>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import React from "react";
-export default {
+import React from "react"
+const settings = {
   lazyLoad: "ondemand",
   infinite: true,
   slidesToShow: 3,
@@ -7,13 +7,13 @@ export default {
   dots: true,
   margin: 3,
   prevArrow: (() => (
-    <button class="nav-btn nav-prev btn">
-      <i class="fas fa-angle-left"></i>
+    <button className="nav-btn nav-prev btn">
+      <i className="fas fa-angle-left"></i>
     </button>
   ))(),
   nextArrow: (() => (
-    <button class="nav-btn nav-next btn">
-      <i class="fas fa-angle-right"></i>
+    <button className="nav-btn nav-next btn">
+      <i className="fas fa-angle-right"></i>
     </button>
   ))(),
   responsive: [
@@ -54,4 +54,6 @@ export default {
       },
     },
   ],
-};
+}
+
+export default settings

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default function Card({
   imageSrc,
@@ -32,5 +32,5 @@ export default function Card({
         </a>
       </div>
     </div>
-  );
+  )
 }

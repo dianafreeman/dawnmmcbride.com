@@ -1,14 +1,14 @@
-import React from "react";
-import Slider from "react-slick";
-import settings from "./sliderSettings";
-import Section from "..";
+import React from "react"
+import Slider from "react-slick"
+import settings from "./sliderSettings"
+import Section from ".."
 
-import vonderharr from "../../../graphics/photos/vonderharr.jpg";
-import hernandez1 from "../../../graphics/photos/hernandez1.jpg";
-import devore from "../../../graphics/photos/devore.jpg";
-import hernandez2 from "../../../graphics/photos/hernandez2.jpg";
-import villarreal from "../../../graphics/photos/villarreal.jpg";
-import cam from "../../../graphics/photos/cam.jpg";
+import vonderharr from "../../../images/photos/vonderharr.jpg"
+import hernandez1 from "../../../images/photos/hernandez1.jpg"
+import devore from "../../../images/photos/devore.jpg"
+import hernandez2 from "../../../images/photos/hernandez2.jpg"
+import villarreal from "../../../images/photos/villarreal.jpg"
+import cam from "../../../images/photos/cam.jpg"
 
 const PhotoSlides = [
   {
@@ -42,19 +42,19 @@ const PhotoSlides = [
     caption:
       "Lab member Yonca Cam presenting at the 2019 Annual Meeting of the Psychonomic Society, Montreal",
   },
-];
+]
 export default function MemoryLab() {
   return (
     <Section title="Human Memory Lab" id="memory-lab">
       <div className="col-sm-6">
-        <p class="lead">
+        <p className="lead">
           In the Human Memory Lab, we examine the processes involved in
           different types of memory, including: prospective memory, false
           memory, implicit memory, and forgetting. Students working in the lab
           have the opportunity to develop experimental research skills,
           presentation skills, and leadership skills. For more information about
           the opportunities in my lab,{" "}
-          <a class="text-secondary" href="mailto:dmmcbri@ilstu.edu">
+          <a className="text-secondary" href="mailto:dmmcbri@ilstu.edu">
             contact me
           </a>{" "}
           or
@@ -62,7 +62,7 @@ export default function MemoryLab() {
             href="https://psychology.illinoisstate.edu/research/researchApprent/"
             target="_blank"
             rel="noreferrer noopener"
-            class="text-secondary pb-6"
+            className="text-secondary pb-6"
           >
             visit the ISU Undergraduate Research Opportunities{" "}
           </a>{" "}
@@ -71,7 +71,7 @@ export default function MemoryLab() {
       </div>
       <div className="col-sm-6">
         <Slider {...settings}>
-          {PhotoSlides.map((p) => (
+          {PhotoSlides.map(p => (
             <div className="col-sm-12">
               <a href={p.image}>
                 <img className="d-block w-100" src={p.image} alt={p.caption} />
@@ -82,5 +82,5 @@ export default function MemoryLab() {
         </Slider>
       </div>
     </Section>
-  );
+  )
 }

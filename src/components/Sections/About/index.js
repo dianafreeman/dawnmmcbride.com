@@ -1,7 +1,7 @@
-import React from "react";
-import Section from "../index";
+import React from "react"
+import Section from "../index"
 
-const AboutDescription = `My research interests are in human memory broadly and forgetting, prospective memory, false memory, and task choices more specifically. My teaching interests/experience includes introductory psychology, research methods and statistics, cognition and learning, and human memory.`;
+const AboutDescription = `My research interests are in human memory broadly and forgetting, prospective memory, false memory, and task choices more specifically. My teaching interests/experience includes introductory psychology, research methods and statistics, cognition and learning, and human memory.`
 export default function About() {
   return (
     <Section
@@ -36,5 +36,5 @@ export default function About() {
         </div>
       </div>
     </Section>
-  );
+  )
 }
