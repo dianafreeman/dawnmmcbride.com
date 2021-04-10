@@ -22,6 +22,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: 'courses'
     label: 'Active Courses'
     delete: false # Prevent users from deleting documents in this collection
+    format: frontmatter
     editor:
       preview: true
     files:
@@ -30,4 +31,4 @@ collections: # A list of collections the CMS should be able to edit
         file: 'src/content/courses.md'
         description: 'Active Courses List'
         fields:
-          - { label: 'Active Courses List', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
