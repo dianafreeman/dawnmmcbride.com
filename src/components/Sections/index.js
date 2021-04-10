@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default function Section({
   title = "About",
@@ -20,5 +20,5 @@ export default function Section({
         </div>
       </div>
     </section>
-  );
+  )
 }

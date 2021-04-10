@@ -12,23 +12,23 @@ collections: # A list of collections the CMS should be able to edit
       preview: false
     files:
       - name: 'general'
-        label: 'Site Settings'
-        file: 'src/siteData.json'
-        description: 'Configurable Site Settings'
+        label: 'Contact information'
+        file: 'src/contactInfo.json'
+        description: 'Contact Info'
         fields:
-          - { label: 'CV Link', name: 'cvFileLink', widget: 'string' }
-          - { label: 'Office Hours Text', name: 'officeHoursText', widget: 'string' }
+          - { label: 'CV Link', name: 'cvLink', widget: 'string' }
+          - { label: 'Office Hours Text', name: 'officeHours', widget: 'string' }
+          - { label: 'Address', name: 'address', widget: 'string' }
 
   - name: 'courses'
-    label: 'Active Courses'
+    label: 'Courses'
     delete: false # Prevent users from deleting documents in this collection
-    format: frontmatter
     editor:
       preview: true
     files:
       - name: 'courses'
         label: 'Active Courses'
         file: 'src/content/courses.md'
-        description: 'Active Courses List'
+        description: 'Courses List'
         fields:
           - { label: 'Body', name: 'body', widget: 'markdown' }

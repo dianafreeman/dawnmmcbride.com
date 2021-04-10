@@ -1,32 +1,31 @@
-import React, { useEffect, useState } from "react";
-import reggienet from "../../../graphics/reggienet.png";
-import Section from "..";
-import siteData from "../../../siteData.json";
-import coursesPath from "../../../content/courses.md";
-import ReactMarkdown from 'react-markdown'
+import React from "react"
+import reggienet from "../../../images/reggienet.png"
+import Section from ".."
+import siteData from "../../../content/contactInfo.json"
+import { useStaticQuery, graphql } from "gatsby"
 import "./index.css"
+// DATA
 
 export default function Teaching() {
-  const [coursesContent, setContent] = useState(null)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-
-    fetch(coursesPath).then(resp => resp.text()).then(content => setContent(content)).catch(error => setError(error))
-
-  }, [])
-
-
+  const data = useStaticQuery(graphql`
+    query {
+      markdownRemark(frontmatter: { label: { eq: "courses-display" } }) {
+        id
+        html
+      }
+    }
+  `)
+  debugger
   return (
     <Section
       title="Teaching"
       id="teaching"
       className="section bg-primary text-light"
     >
-      <div className="col-md-6 mx-auto lead">
-        <ReactMarkdown>{coursesContent}</ReactMarkdown>
-        {!!error && <span style={{color: "red"}}>Something went wrong. </span> }
-      </div>
+      <div
+        className="col-md-6 mx-auto lead"
+        dangerouslySetInnerHTML={{ __html: data.markdownRemark.html || "" }}
+      ></div>
       <div className="col-md-4 mx-auto mr-3 text-center">
         <a
           href="https://reggienet.illinoisstate.edu"
@@ -34,14 +33,16 @@ export default function Teaching() {
           target="_blank"
           className="reggienet-btn btn btn-xl btn-round btn-light text-left mx-auto"
         >
-          <p className="text-center">View and Submit Assignments via ReggieNet </p>
+          <p className="text-center">
+            View and Submit Assignments via ReggieNet{" "}
+          </p>
 
           <img alt="ReggieNet" className="regginet-logo" src={reggienet} />
         </a>
       </div>
       <div className="col-sm-12">
-        <p className="text-center mt-4 pt-4 lead">{siteData.officeHoursText}</p>
+        <p className="text-center mt-4 pt-4 lead">{siteData.officeHours}</p>
       </div>
     </Section>
-  );
+  )
 }

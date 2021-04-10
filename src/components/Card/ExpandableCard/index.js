@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const styles = {
   background: "whitesmoke",
@@ -6,7 +6,7 @@ const styles = {
   borderBottom: " 3px solid white",
   borderRight: " 3px solid white",
   borderLeft: " 3px solid white",
-};
+}
 export default function ExpandableCard({
   title,
   body,
@@ -32,5 +32,5 @@ export default function ExpandableCard({
         <div className="card-footer">{children}</div>
       </div>
     </div>
-  );
+  )
 }

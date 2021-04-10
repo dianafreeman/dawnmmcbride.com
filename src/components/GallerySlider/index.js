@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export default function GallerySlider() {
   return (
@@ -49,5 +49,5 @@ export default function GallerySlider() {
         <img style="visibility: hidden" src="./graphics/photos/004.jpg" />
       </a>
     </div>
-  );
+  )
 }

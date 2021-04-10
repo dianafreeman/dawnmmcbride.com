@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Accordion from "react-bootstrap/Accordion";
+import React, { useState } from "react"
+import Button from "react-bootstrap/Button"
+import Accordion from "react-bootstrap/Accordion"
 
-import Section from "..";
+import Section from ".."
 
 const REFERENCES = {
   forgetting: (() => (
@@ -43,7 +43,6 @@ const REFERENCES = {
             href="https://doi.org/10.1080/09658211.2020.1735445"
             rel="noopener noreferrer"
             target="_blank"
-
           >
             DOI
           </a>
@@ -79,7 +78,6 @@ const REFERENCES = {
       <p className="lead small">Selected References</p>
       <ul className="text-muted">
         <li>
-
           McBride, D. M., &amp; Flaherty, M. (in press). Comparing costs in
           time-based and event-based prospective memory. <em>Memory</em>.
           <a
@@ -123,7 +121,7 @@ const REFERENCES = {
       </ul>
     </div>
   ))(),
-};
+}
 
 const styles = {
   background: "white",
@@ -131,7 +129,7 @@ const styles = {
   borderBottom: " 3px solid white",
   borderRight: " 3px solid white",
   borderLeft: " 3px solid white",
-};
+}
 
 const toggleStyles = {
   display: "flex",
@@ -140,7 +138,7 @@ const toggleStyles = {
   color: " #395BAC",
   textAlign: " left",
   width: "100%",
-};
+}
 
 const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
   return (
@@ -180,24 +178,24 @@ const ResearchCard = ({ onToggle, id, activeKey, eventKey, title, body }) => {
         </Accordion.Collapse>
       </div>
     </>
-  );
-};
+  )
+}
 export default function Research() {
-  const [activeKey, setActiveKey] = useState("0");
+  const [activeKey, setActiveKey] = useState("0")
 
-  const onToggle = (keyString) => void setActiveKey(keyString);
+  const onToggle = keyString => void setActiveKey(keyString)
 
   const accordionItemProps = {
     onToggle,
-  };
+  }
 
   return (
     <Section title="Research" id="research" className="section bg-light-accent">
       <div className="col-sm-12 mx-auto">
         <Accordion
           defaultActiveKey={activeKey}
-          onSelect={(activeKey) => {
-            setActiveKey(activeKey);
+          onSelect={activeKey => {
+            setActiveKey(activeKey)
           }}
         >
           <ResearchCard
@@ -247,5 +245,5 @@ export default function Research() {
         </Accordion>
       </div>
     </Section>
-  );
+  )
 }

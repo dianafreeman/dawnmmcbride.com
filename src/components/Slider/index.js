@@ -1,12 +1,12 @@
-import React from "react";
-import Carousel from "react-bootstrap/Carousel";
+import React from "react"
+import Carousel from "react-bootstrap/Carousel"
 
-import vonderharr from "../../graphics/photos/vonderharr.jpg";
-import hernandez1 from "../../graphics/photos/hernandez1.jpg";
-import devore from "../../graphics/photos/devore.jpg";
-import hernandez2 from "../../graphics/photos/hernandez2.jpg";
-import villarreal from "../../graphics/photos/villarreal.jpg";
-import cam from "../../graphics/photos/cam.jpg";
+import vonderharr from "../../images/photos/vonderharr.jpg"
+import hernandez1 from "../../images/photos/hernandez1.jpg"
+import devore from "../../images/photos/devore.jpg"
+import hernandez2 from "../../images/photos/hernandez2.jpg"
+import villarreal from "../../images/photos/villarreal.jpg"
+import cam from "../../images/photos/cam.jpg"
 
 const PhotoSlides = [
   {
@@ -40,11 +40,11 @@ const PhotoSlides = [
     caption:
       "Lab member Yonca Cam presenting at the 2019 Annual Meeting of the Psychonomic Society, Montreal",
   },
-];
+]
 export default function Slider() {
   return (
     <Carousel>
-      {PhotoSlides.map((p) => (
+      {PhotoSlides.map(p => (
         <Carousel.Item>
           <img className="d-block w-100" src={p.image} alt={p.caption} />
           <Carousel.Caption>
@@ -53,5 +53,5 @@ export default function Slider() {
         </Carousel.Item>
       ))}
     </Carousel>
-  );
+  )
 }

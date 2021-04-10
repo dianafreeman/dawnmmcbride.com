@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 const settings = {
   lazyLoad: "ondemand",
   infinite: true,
@@ -54,6 +54,6 @@ const settings = {
       },
     },
   ],
-};
+}
 
 export default settings
