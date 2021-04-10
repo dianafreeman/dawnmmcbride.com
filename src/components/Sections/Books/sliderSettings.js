@@ -1,5 +1,5 @@
 import React from "react";
-export default {
+const settings = {
   lazyLoad: "ondemand",
   infinite: true,
   slidesToShow: 3,
@@ -55,3 +55,5 @@ export default {
     },
   ],
 };
+
+export default settings
