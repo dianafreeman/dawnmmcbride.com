@@ -20,7 +20,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: 'Office Hours Text', name: 'officeHoursText', widget: 'string' }
 
   - name: 'courses'
-    label: 'Courses'
+    label: 'Active Courses'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: true
@@ -28,6 +28,6 @@ collections: # A list of collections the CMS should be able to edit
       - name: 'courses'
         label: 'Active Courses'
         file: 'src/content/courses.md'
-        description: 'Courses List'
+        description: 'Active Courses List'
         fields:
-          - { label: 'Courses List', name: 'body', widget: 'markdown' }
+          - { label: 'Active Courses List', name: 'body', widget: 'markdown' }
