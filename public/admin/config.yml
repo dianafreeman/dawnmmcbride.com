@@ -30,4 +30,4 @@ collections: # A list of collections the CMS should be able to edit
         file: 'src/content/courses.md'
         description: 'Courses List'
         fields:
-          - { label: 'Courses List', name: 'coursesList', widget: 'markdown' }
+          - { label: 'Courses List', name: 'body', widget: 'markdown' }
